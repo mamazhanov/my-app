@@ -1,0 +1,51 @@
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: 5px;
+  width: 100%;
+  height: 55px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: rgba(0, 0, 0, 0.2) 0.001px solid;
+}
+
+.container {
+  width: 50%;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  width: 100px;
+}
+
+.navs {
+  display: flex;
+  font-size: 20px;
+}
+.navsItem {
+  margin: 0 5px;
+}
+.navsItem a {
+  font-weight: 500;
+  text-decoration: none;
+  color: rgba(88, 88, 88, 0.5);
+}
+.navsItem a:hover {
+  color: rgba(88, 88, 88, 0.9);
+}
+.navsItem .active {
+  color: black;
+}

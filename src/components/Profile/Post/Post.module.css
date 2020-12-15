@@ -1,0 +1,40 @@
+.Post {
+  width: 100%;
+  background: white;
+  margin-top: 10px;
+  border: rgba(0, 0, 0, 0.3) 0.5px solid;
+  border-radius: 4px;
+}
+
+.post_header {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 5px 15px;
+}
+.post_header img {
+  width: 40px;
+  margin-right: 7px;
+}
+
+.post_body img {
+  width: 100%;
+}
+
+.post_footer {
+  max-width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 5px;
+}
+
+.like {
+  color: white;
+  font-weight: 600;
+  padding: 5px 10px;
+  background: red;
+  border-radius: 50%;
+}

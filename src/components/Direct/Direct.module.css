@@ -1,0 +1,74 @@
+.Direct {
+  display: flex;
+}
+
+.dialogs {
+  width: 80%;
+  padding: 10px 10px 5px 10px;
+  background: white;
+  border: rgba(0, 0, 0, 0.5) 0.5px solid;
+  border-radius: 4px;
+}
+
+.messages_window {
+  height: 50vh;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+.messages_window::-webkit-scrollbar {
+  width: 0;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+textarea {
+  width: 100%;
+}
+/*---------------*/
+/*DIALOG ITEMS*/
+/*------------*/
+
+.dialogsItems {
+  width: 20%;
+  margin-right: 5px;
+}
+
+.dialogsItems a {
+  color: rgba(0, 0, 0, 0.7);
+  text-decoration: none;
+}
+.dialogsItems .activeLink {
+  color: black;
+}
+.dialogsItems .activeLink .userLine {
+  background-color: white;
+  border-radius: 5px;
+  border: rgba(0, 0, 0, 0.4) 0.2px solid;
+}
+
+.userLine {
+  display: flex;
+  align-items: center;
+}
+.userLine:hover {
+  border-radius: 5px;
+  border: rgba(0, 0, 0, 0.4) 0.2px solid;
+  background-color: white;
+}
+.userImages {
+  width: 50px;
+  margin-right: 7px;
+}
+
+/* MESSAGES */
+.Message {
+  width: fit-content;
+  margin: 5px 0;
+  padding: 3px 15px;
+  border-radius: 15px;
+  border: rgba(0, 0, 0, 0.7) 0.2px solid;
+  background: rgba(0, 0, 0, 0.2);
+}

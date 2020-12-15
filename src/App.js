@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+import { BrowserRouter, Route } from 'react-router-dom';
 import './App.css';
+import Direct from './components/Direct/Direct';
+import Header from './components/Header/Header';
+import News from './components/News/News';
+import Profile from './components/Profile/Profile';
 
-function App() {
+function App(props) {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <div className="wrapper-content">
+        <div className="container">
+          <Route path="/profile" render={() =>
+            <Profile state={props.state.profilePage}
+              addPost={props.addPost}
+              updateNewImage={props.updateNewImage}
+              updateNewComment={props.updateNewComment} />
+          } />
+          <Route path="/direct" render={() =>
+            <Direct state={props.state.directPage}
+              addMessage={props.addMessage}
+              updateNewMessage={props.updateNewMessage} />
+          } />
+          <Route path="/news" component={News} />
+        </div>
+      </div>
+
     </div>
   );
 }
