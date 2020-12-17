@@ -1,4 +1,5 @@
 import React from 'react';
+import { addPostActionCreator, onCommentChangeActionCreator, onImageUrlChangeActionCreator } from '../../redux/store';
 import Post from './Post/Post';
 import s from './Profile.module.css'
 
@@ -7,19 +8,21 @@ function Profile(props) {
     let state = props.state;
     let postElements = state.posts.map(p => <Post comment={p.comment} image={p.imageUrl} likesCount={p.likesCount} />);
 
-
-
     let addPost = () => {
-        props.addPost();
+        //props.addPost();
+        props.dispatch(addPostActionCreator());
     }
     let onImageUrlChange = (e) => {
         let imageUrl = e.target.value;
-        props.updateNewImage(imageUrl);
+        //props.updateNewImage(imageUrl);
+        props.dispatch(onImageUrlChangeActionCreator(imageUrl));
     }
     let onCommentChange = (e) => {
         let comment = e.target.value;
-        props.updateNewComment(comment);
+        // props.updateNewComment(comment);
+        props.dispatch(onCommentChangeActionCreator(comment));
     }
+
 
     return (
         <div className={s.profile}>

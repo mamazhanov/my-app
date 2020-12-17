@@ -8,7 +8,7 @@ function Header() {
             <div className={s.container}>
                 <nav>
                     <div className={s.logo}>
-                        <img src="https://logos-download.com/wp-content/uploads/2016/04/Acer_logo_logotype_emblem.png" alt="Logo" />
+                        <strong>MY-REACT-APP</strong>
                     </div>
                     <div className={s.navs}>
                         <div className={s.navsItem}>

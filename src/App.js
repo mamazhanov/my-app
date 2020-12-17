@@ -14,14 +14,11 @@ function App(props) {
         <div className="container">
           <Route path="/profile" render={() =>
             <Profile state={props.state.profilePage}
-              addPost={props.addPost}
-              updateNewImage={props.updateNewImage}
-              updateNewComment={props.updateNewComment} />
+              dispatch={props.dispatch} />
           } />
           <Route path="/direct" render={() =>
             <Direct state={props.state.directPage}
-              addMessage={props.addMessage}
-              updateNewMessage={props.updateNewMessage} />
+              dispatch={props.dispatch} />
           } />
           <Route path="/news" component={News} />
         </div>
