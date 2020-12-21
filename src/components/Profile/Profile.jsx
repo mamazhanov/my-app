@@ -4,22 +4,20 @@ import Post from './Post/Post';
 import s from './Profile.module.css'
 
 function Profile(props) {
-    let state = props.state;
+    debugger;
+    let state = props.profilePage;
     let postElements = state.posts.map(p => <Post comment={p.comment} image={p.imageUrl} likesCount={p.likesCount} />);
 
     let addPost = () => {
-        //props.addPost();
-        props.dispatch(addPostActionCreator());
+        props.addPost();
     }
     let onImageUrlChange = (e) => {
         let imageUrl = e.target.value;
-        //props.updateNewImage(imageUrl);
-        props.dispatch(onImageUrlChangeActionCreator(imageUrl));
+        props.updateNewImage(imageUrl);
     }
     let onCommentChange = (e) => {
         let comment = e.target.value;
-        // props.updateNewComment(comment);
-        props.dispatch(onCommentChangeActionCreator(comment));
+        props.updateNewComment(comment);
     }
 
 

@@ -1,23 +1,23 @@
 import React from 'react'
-import { sendMessageActionCreator, updateNewMessage } from '../../redux/direct-reducer';
 import s from './Direct.module.css'
 import DirectItems from './DirectItems/DirectItems';
 import Message from './Message/Message';
+
+
 function Direct(props) {
-    let state = props.state;
+    let state = props.directPage;
+
     let userElemenrs = state.dialogs.map(u => <DirectItems id={u.id} imageUrl={u.imageUrl} name={u.name} />);
     let messageElements = state.messages.map(m => <Message message={m.message} />);
 
 
     let sendMessage = () => {
-        //props.addMessage();
-        props.dispatch(sendMessageActionCreator());
+        props.addMessage();
     }
 
     let onMessageChange = (e) => {
         let text = e.target.value;
-        //props.updateNewMessage(text);
-        props.dispatch(updateNewMessage(text));
+        props.updateNewMessage(text);
     }
 
 
