@@ -6,7 +6,6 @@ import News from './components/News/News';
 import Profile from './components/Profile/Profile';
 
 function App(props) {
-
   return (
     <div className="App">
       <Header />

@@ -1,10 +1,9 @@
 import React from 'react';
-import { addPostActionCreator, onCommentChangeActionCreator, onImageUrlChangeActionCreator } from '../../redux/store';
+import { addPostActionCreator, onCommentChangeActionCreator, onImageUrlChangeActionCreator } from '../../redux/profile-reducer';
 import Post from './Post/Post';
 import s from './Profile.module.css'
 
 function Profile(props) {
-
     let state = props.state;
     let postElements = state.posts.map(p => <Post comment={p.comment} image={p.imageUrl} likesCount={p.likesCount} />);
 
