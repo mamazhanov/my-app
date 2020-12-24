@@ -1,24 +1,26 @@
 import React from 'react'
+import { connect } from 'react-redux';
 import { sendMessageActionCreator, updateNewMessage } from '../../redux/direct-reducer';
 import Direct from './Direct';
 
 
-function DirectContainer(props) {
-    let state = props.store.getState().directPage;
-
-
-    let sendMessage = () => {
-        props.store.dispatch(sendMessageActionCreator());
+const mapStateToProps = (state) => {
+    return {
+        directPage: state.directPage
     }
-
-    let onMessageChange = (text) => {
-        props.store.dispatch(updateNewMessage(text));
-    }
-
-
-    return (
-        <Direct directPage={state} addMessage={sendMessage} updateNewMessage={onMessageChange} />
-    )
 }
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        addMessage: () => {
+            dispatch(sendMessageActionCreator());
+        },
+        updateNewMessage: (text) => {
+            dispatch(updateNewMessage(text));
+        }
+    }
+}
+
+const DirectContainer = connect(mapStateToProps, mapDispatchToProps)(Direct);
 
 export default DirectContainer;

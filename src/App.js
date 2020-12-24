@@ -5,17 +5,17 @@ import Header from './components/Header/Header';
 import News from './components/News/News';
 import ProfileContainer from './components/Profile/ProfileContainer';
 
-function App(props) {
+function App() {
   return (
     <div className="App">
       <Header />
       <div className="wrapper-content">
         <div className="container">
           <Route path="/profile" render={() =>
-            <ProfileContainer store={props.store} />
+            <ProfileContainer />
           } />
           <Route path="/direct" render={() =>
-            <DirectContainer store={props.store} />
+            <DirectContainer />
           } />
           <Route path="/news" component={News} />
         </div>

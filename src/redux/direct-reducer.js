@@ -23,18 +23,22 @@ let initialState = {
 const directReducer = (state = initialState, action) => {
     switch (action.type) {
 
-        case UPDATE_NEW_MESSAGE:
-            state.newMessage = action.newMessageText;
-            return state;
-
-        case ADD_MESSAGE:
+        case UPDATE_NEW_MESSAGE: {
+            let stateCopy = { ...state };
+            stateCopy.newMessage = action.newMessageText;
+            return stateCopy;
+        }
+        case ADD_MESSAGE: {
             let newMessageBody = {
                 id: 6,
                 message: state.newMessage
             }
-            state.messages.push(newMessageBody);
-            state.newMessage = '';
-            return state;
+            let stateCopy = { ...state };
+            stateCopy.messages = [...state.messages];
+            stateCopy.messages.push(newMessageBody);
+            stateCopy.newMessage = '';
+            return stateCopy;
+        }
         default:
             return state;
     }
