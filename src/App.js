@@ -4,6 +4,7 @@ import DirectContainer from './components/Direct/DirectContainer';
 import Header from './components/Header/Header';
 import News from './components/News/News';
 import ProfileContainer from './components/Profile/ProfileContainer';
+import UsersContainer from "./components/Users/UsersContainer";
 
 function App() {
   return (
@@ -16,6 +17,9 @@ function App() {
           } />
           <Route path="/direct" render={() =>
             <DirectContainer />
+          } />
+          <Route path="/users" render={() =>
+            <UsersContainer />
           } />
           <Route path="/news" component={News} />
         </div>

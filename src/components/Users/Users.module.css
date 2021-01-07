@@ -1,0 +1,16 @@
+
+
+.user{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    margin: 7px auto;
+    padding: 15px 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 3px rgba(0,0,0,0.5);
+}
+
+.avaBlock img{
+    width: 140px;
+    border-radius: 50%;
+}

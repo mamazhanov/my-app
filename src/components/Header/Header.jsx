@@ -26,6 +26,13 @@ function Header() {
                             </NavLink>
                         </div>
                         <div className={s.navsItem}>
+                            <NavLink to="/users" activeClassName={s.active}>
+                                <div className={s.link}>
+                                    Users
+                                </div>
+                            </NavLink>
+                        </div>
+                        <div className={s.navsItem}>
                             <NavLink to="/profile" activeClassName={s.active}>
                                 <div className={s.link}>
                                     Profile

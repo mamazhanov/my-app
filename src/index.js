@@ -6,6 +6,10 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import store from './redux/redux-store';
 import { Provider } from 'react-redux';
+import firebaseConfig from "./firebase";
+import firebase from "firebase";
+
+firebase.initializeApp(firebaseConfig);
 
 ReactDOM.render(
   <BrowserRouter>
